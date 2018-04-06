@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/PAMSI_2.dir/main.cpp.o  -o PAMSI_2 

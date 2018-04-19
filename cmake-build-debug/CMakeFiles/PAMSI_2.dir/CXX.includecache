@@ -9,8 +9,12 @@
 /home/korni/Pulpit/PAMSI 2/main.cpp
 iostream
 -
+fstream
+-
 ctime
 -
 cmath
+-
+iomanip
 -
 

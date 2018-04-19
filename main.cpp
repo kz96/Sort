@@ -1,6 +1,8 @@
 #include <iostream>
+#include <fstream>
 #include <ctime>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
@@ -59,11 +61,10 @@ void mergeSort (int* A, int low, int high) {
 }
 
 int partition (int* A, int low, int high){
-    int pivot = A[high];
-    int temp;
-    int i = low;
+    int pivot = A[low];
+    int i = low, j=high, temp;
 
-    for(int j = low; j < high; j++){
+    /*for(int j = low; j < high; j++){
         if (A[j] <= pivot){
             temp = A[j];
             A[j] = A[i];
@@ -75,7 +76,28 @@ int partition (int* A, int low, int high){
     A[high] = A[i];
     A[i] = pivot;
 
-    return i;
+    return i;*/
+
+    while (true) {
+        while (A[j] > pivot) {
+            j--;
+        }
+
+        while (A[i] < pivot) {
+            i++;
+        }
+
+        if (i < j) {
+            temp = A[i];
+            A[i] = A[j];
+            A[j] = temp;
+            i++;
+            j--;
+        }
+        else {
+            return j;
+        }
+    }
 }
 
 void quickSort (int* A, int low, int high) {
@@ -158,7 +180,7 @@ int main() {
     srand(time(NULL));
 
     int arraySize;
-    cout << "Podaj dlugosc kolejki" << endl;
+    cout << "Podaj dlugosc tablicy" << endl;
     cin >> arraySize;
 
     int *A, *A1;
@@ -167,34 +189,32 @@ int main() {
     int low = 0;
     int high = arraySize - 1;
 
-    for (int i = 0; i < arraySize; i++) {
-        A[i] = rand() % 2000 + 1000;
-        //A1[i] = A[i];
-        cout << A[i] << endl;
+
+    ofstream myfile;
+
+    for (int j=1; j < 101; j++) {
+
+        for (int i = 0; i < arraySize; i++) {
+            A[i] = rand() % 2000 + 1000;
+            //A1[i] = A[i];
+            //cout << A[i] << endl;
+        }
+
+
+        clock_t start = clock();
+        introSort(A, arraySize);
+        clock_t stop = clock();
+
+        double czas = (double) (stop - start) / CLOCKS_PER_SEC;
+        //cout << "CZAS " << czas << endl;
+
+
+        myfile.open("rand [1000000].txt", ios::app);
+        myfile << j << ". " << czas << endl;
+        myfile.close();
+        //getch();
     }
 
-    cout << "-------- MERGE SORT -----------" << endl;
-
-    clock_t start = clock();
-    introSort(A,arraySize);
-    clock_t stop = clock();
-
-    double czas = (double)(stop-start)/CLOCKS_PER_SEC;
-    cout << "CZAS " << czas << endl;
-
-
-    /*cout << "-------- QUICK SORT -----------" << endl;
-
-    clock_t start = clock();
-    quickSort(A,low,high);
-    clock_t stop = clock();
-
-    double czas = (double)(stop-start)/CLOCKS_PER_SEC;
-    cout << "CZAS " << czas << endl;*/
-
-    for (int i = 0; i < arraySize; i++) {
-        cout << A[i] << endl;
-    }
 
     delete A;
 }

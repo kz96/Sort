@@ -60,30 +60,15 @@ void mergeSort (int* A, int low, int high) {
     }
 }
 
-int partition (int* A, int low, int high){
-    int pivot = A[low];
-    int i = low, j=high, temp;
-
-    /*for(int j = low; j < high; j++){
-        if (A[j] <= pivot){
-            temp = A[j];
-            A[j] = A[i];
-            A[i] = temp;
-            i++;
-        }
-    }
-
-    A[high] = A[i];
-    A[i] = pivot;
-
-    return i;*/
+int partition (int* A, int low, int high) {
+    int x = A[low];
+    int i = low, j = high, temp;
 
     while (true) {
-        while (A[j] > pivot) {
+        while (A[j] > x) {
             j--;
         }
-
-        while (A[i] < pivot) {
+        while (A[i] < x) {
             i++;
         }
 
@@ -101,10 +86,11 @@ int partition (int* A, int low, int high){
 }
 
 void quickSort (int* A, int low, int high) {
+    int border;
     if (low < high) {
-        int q = partition(A,low,high);
-        quickSort(A, low, q-1);
-        quickSort(A, q+1, high);
+        border = partition(A,low,high);
+            quickSort(A, low, border);
+            quickSort(A, border+1, high);
     }
 }
 
@@ -150,29 +136,31 @@ void heapSort (int* A, int arraySize) {
     }
 }
 
-void insertionSort (int* A, int arraySize) {
-    int temp,j;
+void insertionSort (int* A, int low, int high) {
+    int temp;
+    int i,j;
 
-    for (int i = 1; i < arraySize; i++) {
+    for (i = low; i < high; i++) {
         temp = A[i];
-        for (j = i - 1; j >= 0 && A[j] > temp; j--){
-            A[j+1] = A[j];
+        for (j = i; j > 0 && A[j-1] > temp; j--){
+            A[j] = A[j-1];
         }
-        A[j+1] = temp;
+        A[j] = temp;
     }
 }
 
 void introSort (int* A, int arraySize) {
-    int partitionSize = partition(A, 0, arraySize - 1);
+    //int arraySize = high + 1;
+    int partitionSize = partition(A, 0, arraySize-1);
 
     if (partitionSize < 16) {
-        insertionSort(A, arraySize);
+        insertionSort(A, 0, arraySize-1);
     }
     else if (partitionSize > (2*log(arraySize))) {
         heapSort(A, arraySize);
     }
     else {
-        quickSort(A, 0, arraySize - 1);
+        quickSort(A, 0, arraySize-1);
     }
 }
 
@@ -183,36 +171,34 @@ int main() {
     cout << "Podaj dlugosc tablicy" << endl;
     cin >> arraySize;
 
-    int *A, *A1;
+    int *A, *A1, *A2;
     A = new int [arraySize];
-    //A1 = new int [arraySize];
     int low = 0;
     int high = arraySize - 1;
 
 
     ofstream myfile;
 
-    for (int j=1; j < 101; j++) {
+   for (int j=1; j < 101; j++) {
 
         for (int i = 0; i < arraySize; i++) {
-            A[i] = rand() % 2000 + 1000;
-            //A1[i] = A[i];
-            //cout << A[i] << endl;
+            A[i] = rand() % 9999 + 1;
+
         }
 
+        //cout << "\nINTRO SORT" << endl;
 
         clock_t start = clock();
-        introSort(A, arraySize);
+        quickSort(A, low, high);
         clock_t stop = clock();
 
         double czas = (double) (stop - start) / CLOCKS_PER_SEC;
         //cout << "CZAS " << czas << endl;
 
 
-        myfile.open("rand [1000000].txt", ios::app);
+        myfile.open("rand[1000000].txt", ios::app);
         myfile << j << ". " << czas << endl;
         myfile.close();
-        //getch();
     }
 
 

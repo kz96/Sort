@@ -34,20 +34,9 @@
   <component name="ChangeListManager">
     <list default="true" id="eb83791a-566e-45bc-afad-113d70dd6f8d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PAMSI_2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PAMSI_2.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PAMSI_2.dir/main.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/PAMSI_2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PAMSI_2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/introsort/rand/rand [1000000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/introsort/rand/rand [1000000].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/introsort/rand/rand [100000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/introsort/rand/rand [100000].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/introsort/rand/rand [10000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/introsort/rand/rand [10000].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/introsort/rand/rand [500000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/introsort/rand/rand [500000].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/introsort/rand/rand [50000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/introsort/rand/rand [50000].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [1000000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [1000000].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [100000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [100000].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [10000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [10000].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [500000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [500000].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [50000].txt" beforeDir="false" afterPath="$PROJECT_DIR$/wyniki/quicksort/rand/rand [50000].txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,8 +52,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="211" column="29" selection-start-line="211" selection-start-column="29" selection-end-line="211" selection-end-column="29" />
+            <state relative-caret-position="569">
+              <caret line="191" column="30" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -157,18 +146,21 @@
       <workItem from="1524064652730" duration="1065000" />
       <workItem from="1524065741818" duration="364000" />
       <workItem from="1524066778441" duration="333000" />
+      <workItem from="1524144024208" duration="324000" />
+      <workItem from="1524223176893" duration="5071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17363000" />
+    <option name="totallyTimeSpent" value="22758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.1809084" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.12796208" />
+      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.13270143" />
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="bottom" id="TeamCity" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -194,6 +186,26 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3798">
+          <caret line="211" column="29" selection-start-line="211" selection-start-column="29" selection-end-line="211" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2970">
@@ -334,10 +346,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.cache/.fr-ZmAwcJ/LABORKA/LAB 1/sortowanie.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cache/.fr-DhE3Mw/LABORKA/LAB 1/sortowanie.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-174">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="211" column="29" selection-start-line="211" selection-start-column="29" selection-end-line="211" selection-end-column="29" />
+        <state relative-caret-position="569">
+          <caret line="191" column="30" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

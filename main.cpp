@@ -136,31 +136,34 @@ void heapSort (int* A, int arraySize) {
     }
 }
 
-void insertionSort (int* A, int low, int high) {
-    int temp;
-    int i,j;
-
-    for (i = low; i < high; i++) {
-        temp = A[i];
-        for (j = i; j > 0 && A[j-1] > temp; j--){
+void insertionSort (int* A, int arraySize) {
+    int i,j,x;
+    for (i = 1; i < arraySize; i++) {
+        x = A[i];
+        for (j = i; j > 0 && A[j-1] > x; j--) {
             A[j] = A[j-1];
+            A[j-1] = x;
         }
-        A[j] = temp;
     }
 }
 
 void introSort (int* A, int arraySize) {
-    //int arraySize = high + 1;
     int partitionSize = partition(A, 0, arraySize-1);
 
     if (partitionSize < 16) {
-        insertionSort(A, 0, arraySize-1);
+        insertionSort(A, arraySize);
     }
     else if (partitionSize > (2*log(arraySize))) {
         heapSort(A, arraySize);
     }
     else {
         quickSort(A, 0, arraySize-1);
+    }
+}
+
+void reverse (int* A, int arraySize) {
+    for (int i = 0; i < (arraySize/2); i++) {
+        swap(A[i],A[arraySize-1-i]);
     }
 }
 
@@ -171,7 +174,7 @@ int main() {
     cout << "Podaj dlugosc tablicy" << endl;
     cin >> arraySize;
 
-    int *A, *A1, *A2;
+    int *A;
     A = new int [arraySize];
     int low = 0;
     int high = arraySize - 1;
@@ -179,27 +182,28 @@ int main() {
 
     ofstream myfile;
 
-   for (int j=1; j < 101; j++) {
+     for (int j=1; j < 101; j++) {
 
         for (int i = 0; i < arraySize; i++) {
             A[i] = rand() % 9999 + 1;
-
+            //cout << A[i] << endl;
         }
 
-        //cout << "\nINTRO SORT" << endl;
+        quickSort(A,low,high);
+        reverse(A, arraySize);
 
         clock_t start = clock();
         quickSort(A, low, high);
         clock_t stop = clock();
 
         double czas = (double) (stop - start) / CLOCKS_PER_SEC;
-        //cout << "CZAS " << czas << endl;
 
 
-        myfile.open("rand[1000000].txt", ios::app);
+
+        myfile.open("1000000.txt", ios::app);
         myfile << j << ". " << czas << endl;
         myfile.close();
-    }
+   }
 
 
     delete A;

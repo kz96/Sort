@@ -174,6 +174,7 @@ int main() {
     cout << "Podaj dlugosc tablicy" << endl;
     cin >> arraySize;
 
+
     int *A;
     A = new int [arraySize];
     int low = 0;
@@ -184,16 +185,16 @@ int main() {
 
      for (int j=1; j < 101; j++) {
 
+
         for (int i = 0; i < arraySize; i++) {
             A[i] = rand() % 9999 + 1;
             //cout << A[i] << endl;
         }
 
-        quickSort(A,low,high);
-        reverse(A, arraySize);
+        quickSort(A,low, ((0.997*arraySize)-1));
 
         clock_t start = clock();
-        quickSort(A, low, high);
+        introSort(A, arraySize);
         clock_t stop = clock();
 
         double czas = (double) (stop - start) / CLOCKS_PER_SEC;
@@ -204,7 +205,6 @@ int main() {
         myfile << j << ". " << czas << endl;
         myfile.close();
    }
-
 
     delete A;
 }

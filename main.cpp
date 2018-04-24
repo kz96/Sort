@@ -203,6 +203,29 @@ void introSort (T* A, int arraySize) {
 }
 
 /*
+ * Funkcje sprawdzajace poprawnosc sortowania
+ */
+template <class T>
+bool check (T* A, int arraySize) {
+    for (int i = 0; i< arraySize; i++) {
+        if (A[i] > A[i+1]) {
+            return false;
+        }
+        return true;
+    }
+}
+
+template <class T>
+void ifCorrect(T* A, int arraySize) {
+    if (check(A,arraySize) == true) {
+        cout << "Sortowanie wykonane poprawnie !" << endl;
+    }
+    else {
+        cout << "Blad sortowania !" << endl;
+    }
+}
+
+/*
  * Pomocnicza funkcja odwracajaca tablice "do gory nogami"
  */
 template <class T>
@@ -233,38 +256,42 @@ void sorting(T* A, int arraySize) {
     char wybor;
     cin >> wybor;
     switch (wybor) {
-        case '1':
+        case '1': {
             cout << "Przed sortowaniem" << endl;
             print(A, arraySize);
-            //clock_t start = clock();
+            clock_t start = clock();
             quickSort(A, 0, arraySize - 1);
-            //clock_t stop = clock();
-            //double czas = (double) (stop - start) / CLOCKS_PER_SEC;
-            cout << "Po sortowaniu" << endl;
+            clock_t stop = clock();
+            double czas = (double) (stop - start) / CLOCKS_PER_SEC;
+            cout << "\nPo sortowaniu" << endl;
             print(A, arraySize);
+            cout << "Czas sortowania: " << setprecision(6) << fixed << czas << "[s]" << endl;
             break;
-        case '2':
+        }
+        case '2': {
             cout << "Przed sortowaniem" << endl;
             print(A, arraySize);
-            //start = clock();
+            clock_t start = clock();
             mergeSort(A, 0, arraySize - 1);
-            //stop = clock();
-            //czas = (double) (stop - start) / CLOCKS_PER_SEC;
-            cout << "Po sortowaniu" << endl;
+            clock_t stop = clock();
+            double czas = (double) (stop - start) / CLOCKS_PER_SEC;
+            cout << "\nPo sortowaniu" << endl;
             print(A, arraySize);
-            //cout << "CZAS" << czas << endl;
+            cout << "Czas sortowania: " << setprecision(6) << fixed << czas << "[s]" << endl;
             break;
-        case '3':
+        }
+        case '3': {
             cout << "Przed sortowaniem" << endl;
             print(A, arraySize);
-            //start = clock();
+            clock_t start = clock();
             introSort(A, arraySize);
-            //stop = clock();
-            //czas = (double) (stop - start) / CLOCKS_PER_SEC;
-            cout << "Po sortowaniu" << endl;
+            clock_t stop = clock();
+            double czas = (double) (stop - start) / CLOCKS_PER_SEC;
+            cout << "\nPo sortowaniu" << endl;
             print(A, arraySize);
-            //cout << "CZAS" << czas << endl;
+            cout << "Czas sortowania: " << setprecision(6) << fixed << czas << "[s]" << endl;
             break;
+        }
         default:
             cout << "Zła dana" << endl;
 
@@ -275,7 +302,7 @@ void menu() {
     cout << "\n\nMENU" << endl;
     cout << "1. SORTING" << endl;
     cout << "2. REVERSE" << endl;
-    cout << "3. CLEAR" << endl;
+    cout << "3. CHECK CORRECTNESS" << endl;
     cout << "4. END" << endl;
 }
 
@@ -306,11 +333,12 @@ int main() {
                 print(A,arraySize);
                 break;
             case '3':
-                delete A;
-                cout << "Tablica usunieta !" << endl;
+                ifCorrect(A,arraySize);
                 break;
             default:
-                cout << "ZLA DANA" << endl;
+                if (c != '4') {
+                    cout << "ZLA DANA" << endl;
+                }
                 break;
 
         }

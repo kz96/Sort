@@ -123,6 +123,33 @@ PAMSI_2/fast:
 	$(MAKE) -f CMakeFiles/PAMSI_2.dir/build.make CMakeFiles/PAMSI_2.dir/build
 .PHONY : PAMSI_2/fast
 
+Sorting.o: Sorting.cpp.o
+
+.PHONY : Sorting.o
+
+# target to build an object file
+Sorting.cpp.o:
+	$(MAKE) -f CMakeFiles/PAMSI_2.dir/build.make CMakeFiles/PAMSI_2.dir/Sorting.cpp.o
+.PHONY : Sorting.cpp.o
+
+Sorting.i: Sorting.cpp.i
+
+.PHONY : Sorting.i
+
+# target to preprocess a source file
+Sorting.cpp.i:
+	$(MAKE) -f CMakeFiles/PAMSI_2.dir/build.make CMakeFiles/PAMSI_2.dir/Sorting.cpp.i
+.PHONY : Sorting.cpp.i
+
+Sorting.s: Sorting.cpp.s
+
+.PHONY : Sorting.s
+
+# target to generate assembly for a file
+Sorting.cpp.s:
+	$(MAKE) -f CMakeFiles/PAMSI_2.dir/build.make CMakeFiles/PAMSI_2.dir/Sorting.cpp.s
+.PHONY : Sorting.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PAMSI_2"
+	@echo "... Sorting.o"
+	@echo "... Sorting.i"
+	@echo "... Sorting.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

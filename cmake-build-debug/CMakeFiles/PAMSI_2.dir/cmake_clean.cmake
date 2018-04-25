@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PAMSI_2.dir/main.cpp.o"
+  "CMakeFiles/PAMSI_2.dir/Sorting.cpp.o"
   "PAMSI_2.pdb"
   "PAMSI_2"
 )

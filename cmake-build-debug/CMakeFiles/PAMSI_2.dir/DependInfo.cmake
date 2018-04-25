@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/korni/Pulpit/PAMSI 2/Sorting.cpp" "/home/korni/Pulpit/PAMSI 2/cmake-build-debug/CMakeFiles/PAMSI_2.dir/Sorting.cpp.o"
   "/home/korni/Pulpit/PAMSI 2/main.cpp" "/home/korni/Pulpit/PAMSI 2/cmake-build-debug/CMakeFiles/PAMSI_2.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

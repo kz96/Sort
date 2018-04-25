@@ -4,4 +4,4 @@ project(PAMSI_2)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(PAMSI_2
-        main.cpp)
+        main.cpp Sorting.cpp Sorting.h)

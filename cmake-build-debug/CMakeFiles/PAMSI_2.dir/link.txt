@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/PAMSI_2.dir/main.cpp.o  -o PAMSI_2 
+/usr/bin/c++  -g   CMakeFiles/PAMSI_2.dir/main.cpp.o CMakeFiles/PAMSI_2.dir/Sorting.cpp.o  -o PAMSI_2 

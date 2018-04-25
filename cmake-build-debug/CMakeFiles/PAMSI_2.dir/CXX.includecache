@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/korni/Pulpit/PAMSI 2/Sorting.cpp
+Sorting.h
+/home/korni/Pulpit/PAMSI 2/Sorting.h
+
+/home/korni/Pulpit/PAMSI 2/Sorting.h
+iostream
+-
+fstream
+-
+ctime
+-
+cmath
+-
+iomanip
+-
+
 /home/korni/Pulpit/PAMSI 2/main.cpp
 iostream
 -
@@ -17,4 +33,6 @@ cmath
 -
 iomanip
 -
+Sorting.h
+/home/korni/Pulpit/PAMSI 2/Sorting.h
 

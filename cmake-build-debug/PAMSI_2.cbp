@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/korni/Pulpit/PAMSI 2/Sorting.cpp">
+			<Option target="PAMSI_2"/>
+		</Unit>
+		<Unit filename="/home/korni/Pulpit/PAMSI 2/Sorting.h">
+			<Option target="PAMSI_2"/>
+		</Unit>
 		<Unit filename="/home/korni/Pulpit/PAMSI 2/main.cpp">
 			<Option target="PAMSI_2"/>
 		</Unit>
